@@ -1,0 +1,24 @@
+{
+    "name": "mustafakarali/tobbsoapservice",
+    "description": "TOBB üye dizini için SOAP istemci kütüphanesi",
+    "type": "library",
+    "version": "1.0",
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Karali\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mustafa KARALI",
+            "email": "mustafa@birharika.com"
+        }
+    ],
+    "license": "MIT"
+}
