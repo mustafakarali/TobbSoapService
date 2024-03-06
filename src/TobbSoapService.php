@@ -1,10 +1,18 @@
 <?php
 
 /**
- *  SoapServiceClient
+ *  TobbSoapService
  *
- * Bu sınıf TOBB üye dizini SOAP istemcisi
+ * TOBB üye dizini SOAP istemcisi
  */
+
+namespace Karali;
+
+use SoapClient;
+use SoapFault;
+use SoapHeader;
+use SoapVar;
+
 class TobbSoapService
 {
     private SoapClient $client;

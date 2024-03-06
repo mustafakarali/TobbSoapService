@@ -5,6 +5,9 @@ use PHPUnit\Framework\TestCase;
 
 class TobbSoapServiceTest extends TestCase
 {
+    /**
+     * @throws SoapFault
+     */
     public function testCallServiceReturnsExpectedValue()
     {
         // Test için gerekli parametreler
@@ -23,7 +26,7 @@ class TobbSoapServiceTest extends TestCase
             ->willReturn((object)['return' => (object)['donusDegeri' => $expectedResult]]);
 
         // TobbSoapService nesnesini mock SoapClient ile oluşturalım
-        $service = new TobbSoapService($username, $password, $odaBorsaNo, $servisAdi, $girdiler);
+        $service = new Karali\TobbSoapService($username, $password, $odaBorsaNo, $servisAdi, $girdiler);
         $service->setClient($soapClientMock);
 
         // callService metodunu çağıralım ve sonucu kontrol edelim
