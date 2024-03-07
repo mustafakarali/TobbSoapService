@@ -2,7 +2,7 @@
     "name": "mustafakarali/tobbsoapservice",
     "description": "TOBB üye dizini için SOAP istemci kütüphanesi",
     "type": "library",
-    "version": "1.1",
+    "version": "1.2",
     "require": {
         "php": "^8.0",
         "ext-soap": "*"
