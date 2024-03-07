@@ -64,9 +64,7 @@ class TobbSoapService
         try {
             $nonce = mt_rand();
             $created = gmdate('Y-m-d\TH:i:s\Z');
-
             $encodedNonce = base64_encode($nonce);
-
             $digestString = $nonce . $created . $this->password;
             $digest = base64_encode(sha1($digestString, true));
 
@@ -110,8 +108,6 @@ class TobbSoapService
                 'message' => $fault->getMessage()
             ];
         }
-
-        header('Content-Type: application/json; charset=utf-8');
         return $data['status'] ? $data['data'] : json_encode($data);
     }
 }
